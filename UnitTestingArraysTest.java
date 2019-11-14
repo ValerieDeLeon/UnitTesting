@@ -1,4 +1,7 @@
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class UnitTestingArraysTest
@@ -40,17 +43,49 @@ class UnitTestingArraysTest
         assertEquals("6 5 4 3 ", four.combineArr());
     }
 
-    // Test 2: (2D)
+    // Test 2: (2D) Locate the target word and print out location
+    @Test
+    void Array2DTest1()
+    {
+        String[][] twoArr = {{"One", "Two", "Three"},
+                            {"Four", "Five", "Six"}};
+        UnitTestingArrays one = new UnitTestingArrays(twoArr, "Four");
+        assertEquals("[1, 0]", one.locateWord());
+    }
+
     @Test
     void Array2DTest2()
     {
-
+        String[][] twoArr = {{"1", "2", "3"},
+                            {"4", "5", "6"}};
+        UnitTestingArrays two = new UnitTestingArrays(twoArr, "2");
+        assertEquals("[0, 1]", two.locateWord());
     }
 
-    // Test 3: (ArrayList)
+    @Test
+    void Array2DTest3()
+    {
+        String[][] twoArr = {{"1", "Two", "3"},
+                            {"Four", "5", "Six"}};
+        UnitTestingArrays three = new UnitTestingArrays(twoArr, "Six");
+        assertEquals("[1, 2]", three.locateWord());
+    }
+
+    @Test
+    void Array2DTest4()
+    {
+        String[][] twoArr = {{"true", "false", "true"},
+                           {"false", "true", "false"}};
+        UnitTestingArrays four = new UnitTestingArrays(twoArr, "true");
+        assertEquals("[0, 0]", four.locateWord());
+    }
+
+    // Test 3: (ArrayList) Remove specified word and print list
     @Test
     void ArrayListTest1()
     {
-
+        //ArrayList<String> arrList = new ArrayList<String>();
+        //UnitTestingArrays one = new UnitTestingArrays(arrList, "Milk");
+        //assertEquals("", one.removeAndPrint());
     }
 }
