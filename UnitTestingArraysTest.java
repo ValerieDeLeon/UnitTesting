@@ -6,7 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UnitTestingArraysTest
 {
-    // Test 1: (1D) Combining Two Arrays
+    // Test 1: (1D) Charlie is doing some number crunching for hotel funds. There are a few receipts but she needs to
+    // combine the prices. Combine the two arrays to create one list.
     @Test
     void Array1DTest1()
     {
@@ -43,7 +44,8 @@ class UnitTestingArraysTest
         assertEquals("6 5 4 3 ", four.combineArr());
     }
 
-    // Test 2: (2D) Locate the target word and print out location
+    // Test 2: (2D) Using a list, you need to remove one to clean up your messy list. Find the value you need
+    // to remove and give its location.
     @Test
     void Array2DTest1()
     {
@@ -80,12 +82,33 @@ class UnitTestingArraysTest
         assertEquals("[0, 0]", four.locateWord());
     }
 
-    // Test 3: (ArrayList) Remove specified word and print list
+    // Test 3: (ArrayList) Your grocery list is in your head, but you need to write it down.
+    // Use an ArrayList to make the list real!
     @Test
     void ArrayListTest1()
     {
-        //ArrayList<String> arrList = new ArrayList<String>();
-        //UnitTestingArrays one = new UnitTestingArrays(arrList, "Milk");
-        //assertEquals("", one.removeAndPrint());
+        UnitTestingArrays one = new UnitTestingArrays("Grain Sponge", "Moo Juice", "Cloud Tears");
+        assertEquals("Grain Sponge Moo Juice Cloud Tears ", one.createAndDisplay());
+    }
+
+    @Test
+    void ArrayListTest2()
+    {
+        UnitTestingArrays two = new UnitTestingArrays("1", "2", "3");
+        assertEquals("1 2 3 ", two.createAndDisplay());
+    }
+
+    @Test
+    void ArrayListTest3()
+    {
+        UnitTestingArrays three = new UnitTestingArrays("-1", "-2", "-3");
+        assertEquals("-1 -2 -3 ", three.createAndDisplay());
+    }
+
+    @Test
+    void ArrayListTest4()
+    {
+        UnitTestingArrays four = new UnitTestingArrays("One", "Two", "Three");
+        assertEquals("One Two Three ", four.createAndDisplay());
     }
 }
