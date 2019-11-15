@@ -36,7 +36,7 @@ public class UnitTestingLoops
         }
         for (int i = 0; i < num; i++)
         {
-            result += "Cookie ";
+            result += "Cookie";
         }
         return result;
     }
