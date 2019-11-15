@@ -4,7 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UnitTestingLoopsTest
 {
-    // Test 1: (While) Printing a word backwards
+    // Test 1: (While) Your making a word search and some words need to be a bit scrambled.
+    // Take some words and return them backwards.
     @Test
     void WhileLoopTest1()
     {
@@ -26,12 +27,20 @@ class UnitTestingLoopsTest
         assertEquals("yZaRc", three.backwardString());
     }
 
-    // Test 2: (For) Cookie Giving
+    @Test
+    void WhileLoopTest4()
+    {
+        UnitTestingLoops four = new UnitTestingLoops("WOWIE");
+        assertEquals("EIWOW", four.backwardString());
+    }
+
+    // Test 2: (For) Your grandma is giving out cookies. Print out "Cookie" for each
+    // cookie your grandma gives. <3
     @Test
     void ForLoopTest1()
     {
         UnitTestingLoops one = new UnitTestingLoops(5);
-        assertEquals("Cookie Cookie Cookie Cookie Cookie ", one.cookies());
+        assertEquals("CookieCookieCookieCookieCookie", one.cookies());
     }
 
     @Test
@@ -45,6 +54,13 @@ class UnitTestingLoopsTest
     void ForLoopTest3()
     {
         UnitTestingLoops three = new UnitTestingLoops(15);
-        assertEquals("Cookie Cookie Cookie Cookie Cookie Cookie Cookie Cookie Cookie Cookie Cookie Cookie Cookie Cookie Cookie ", three.cookies());
+        assertEquals("CookieCookieCookieCookieCookieCookieCookieCookieCookieCookieCookieCookieCookieCookieCookie", three.cookies());
+    }
+
+    @Test
+    void ForLoopTest4()
+    {
+        UnitTestingLoops four = new UnitTestingLoops(-84385);
+        assertEquals("false", four.cookies());
     }
 }
