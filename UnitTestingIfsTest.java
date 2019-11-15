@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class UnitTestingIfsTest
 {
 
-    // Test 1: Getting a String
+    // Test 1: You need to print out some interesting words, pick some and display them!
     @Test
     void simpleOutputTest1()
     {
@@ -26,7 +26,14 @@ class UnitTestingIfsTest
         assertEquals("pneumonoultramicroscopicsilicovolcanoconiosis", three.getNum());
     }
 
-    // Test 2: If number is even
+    @Test
+    void simpleOutputTest4()
+    {
+        UnitTestingIfs four = new UnitTestingIfs("Elephant");
+        assertEquals("Elephant", four.getNum());
+    }
+
+    // Test 2: For your math assignment, you need list some even numbers, check to see if their even!
     @Test
     void modNumTest1()
     {
@@ -62,7 +69,8 @@ class UnitTestingIfsTest
         assertEquals(false, five.ifMod());
     }
 
-    // Test 3: Making sure a number is within a certain range for company supply (15 - 50)
+    // Test 3: A company is shipped material, but their can only have 15 to 50 items at a time.
+    // Make sure their is an appropriate amount of material.
     @Test
     void SupplyTest1()
     {
