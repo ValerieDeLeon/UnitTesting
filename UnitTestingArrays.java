@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class UnitTestingArrays
 {
@@ -7,7 +8,11 @@ public class UnitTestingArrays
     int[] arr2;
     String[][] twoArr;
     String target;
-    List<String> arrList;
+    String data1;
+    String data2;
+    String data3;
+    ArrayList<String> arrList;
+
 
     public UnitTestingArrays(int[] arr1, int[]arr2)
     {
@@ -21,10 +26,11 @@ public class UnitTestingArrays
         this.target = target;
     }
 
-    public UnitTestingArrays(List<String> arrList, String target)
+    public UnitTestingArrays(String data1, String data2, String data3)
     {
-        this.arrList = arrList;
-        this.target = target;
+        this.data1 = data1;
+        this.data2 = data2;
+        this.data3 = data3;
     }
 
     // Test 1: (1D) Combining Two Arrays
@@ -63,8 +69,20 @@ public class UnitTestingArrays
         return "false";
     }
 
-    public String removeAndPrint()
+    public String createAndDisplay()
     {
-        return "";
+        String result = "";
+        ArrayList<String> arrList = new ArrayList<String>();
+        arrList.add(data1);
+        arrList.add(data2);
+        arrList.add(data3);
+
+        ListIterator iterator = arrList.listIterator();
+        while (iterator.hasNext())
+        {
+            result += iterator.next() + " ";
+        }
+
+        return result;
     }
 }
