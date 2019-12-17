@@ -18,4 +18,4 @@ You will be required to create one for each type of structure:
 Included with each file you will need a document that includes 1) what structure you are testing, a scenario (story) to accompany, a sample to demonstrate.
 Your unit testing must be rigorous! In most cases this should be at least four cases.
 
---Pertinent Info (-environment, reflections, lessons learned, favorite part, challenges, etc.) This does not need to be lengthy.
+Development in **IntelliJ** // It was difficult finding tests for more complex functions with 2D arrays and an ArrayList. It was also a stuggle to come up with test cases.
